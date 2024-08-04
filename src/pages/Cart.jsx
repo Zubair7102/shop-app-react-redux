@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
+import CartItem from '../components/CartItem';
+
 const Cart = () => {
     const {cart} = useSelector((state) => state);
-    const [totalAmoun, setTotalAmount] = useState(0);
+    const [totalAmount, setTotalAmount] = useState(0);
 
 
     useEffect( ()=> {

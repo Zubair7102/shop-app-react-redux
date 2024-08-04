@@ -1,6 +1,10 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 const Product = ({post}) => {
+
+
+  const {cart} = useSelector((state) => state);
   return (
     <div>
       <div>
@@ -19,11 +23,15 @@ const Product = ({post}) => {
         <p>{post.price}</p>
       </div>
 
-      <button>
-        {
-            true ? <p>Remove Item</p> : <p>Add to Cart</p>
-        }
-      </button>
+      {
+        cart.some((p) => p.id == post.id) ? 
+        (<button>
+          Remove Item
+        </button>) :
+        (<button>
+          Add to Cart
+        </button>)
+      }
     </div>
   )
 }

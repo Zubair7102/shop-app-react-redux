@@ -39,7 +39,7 @@ const Product = ({item}) => {
       </div>
 
       <div className="flex justify-between gap-12 items-center w-full mt-5">
-        <p>{item.price}</p>
+        <p className="text-green-600 font-semibold">${item.price}</p>
       </div>
 
       {

@@ -15,6 +15,16 @@ code {
 @tailwind components;
 @tailwind utilities;
 
+/* Center the spinner container in the middle of the viewport */
+.spinner-container {
+  position: fixed; /* Fixes the container's position */
+  top: 50%; /* Centers the container vertically */
+  left: 50%; /* Centers the container horizontally */
+  transform: translate(-50%, -50%); /* Offsets the container to properly center it */
+  z-index: 1000; /* Ensures it appears above other content */
+}
+
+/* Your existing .progress styles */
 .progress {
   width: 134.4px;
   height: 24.6px;
@@ -34,8 +44,12 @@ code {
   animation: progress-pf82op 2s infinite;
 }
 
+/* Add the keyframes for animation */
 @keyframes progress-pf82op {
+  0% {
+    transform: translateX(-100%);
+  }
   100% {
-     inset: 0;
+    transform: translateX(100%);
   }
 }

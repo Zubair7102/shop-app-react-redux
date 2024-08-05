@@ -2,9 +2,9 @@ import React from 'react'
 
 const Spinner = () => {
   return (
-    <div className='progress'>
-      
-    </div>
+    <div class="spinner-container">
+  <div class="progress"></div>
+</div>
   )
 }
 
